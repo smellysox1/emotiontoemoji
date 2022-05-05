@@ -39,8 +39,8 @@ else{
     console.log(results);
     document.getElementById("result_emotion_name").innerHTML = results[0].label;
     document.getElementById("result_emotion_name2").innerHTML = results[1].label;
-    prediction1 = results[0].label;
-    prediction2 = results[1].label;
+    results[0].label = prediction1;
+    results[1].label = prediction2;
     speak();
     if (results[0].label == "happy"){
         document.getElementById("update_emoji").innerHTML = "&#128522;";
